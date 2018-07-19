@@ -8,6 +8,11 @@ git 'https://github.com/kusupudiswamy/maven-hello-world.git'
     sh '''
     whoami
     
+    pwd
+    cd my-app
+    
+    pwd
+    
     mvn package'''
 
   }
