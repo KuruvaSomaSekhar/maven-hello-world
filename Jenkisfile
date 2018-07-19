@@ -1,5 +1,8 @@
 node
 {
+tools {
+    maven 'mvn'
+  }
 stage ( 'SCM CHECKOUT')
 {
 git 'https://github.com/kusupudiswamy/maven-hello-world.git'
