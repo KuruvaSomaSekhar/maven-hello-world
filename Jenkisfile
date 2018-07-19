@@ -5,9 +5,8 @@ stage ( 'SCM CHECKOUT')
 git 'https://github.com/kusupudiswamy/maven-hello-world.git'
 }
   stage ('compile-package'){
-    def mavenhome=tool name: 'maven', type: 'maven'
     sh 'echo whoami'
-    sh "${mavenhome}/bin/mvn package"
+    sh 'mvn package'
 
   }
 
