@@ -7,9 +7,7 @@ git 'https://github.com/kusupudiswamy/maven-hello-world.git'
   stage ('compile-package'){
     sh '''
     whoami
-    whereis mvn
-    echo $MVN_HOME
-    which mvn
+    
     mvn package'''
 
   }
