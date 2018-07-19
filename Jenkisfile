@@ -6,24 +6,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo hello'
+	    git 'https://github.com/kusupudiswamy/maven-hello-world.git'
+        sh 'mvn -B -DskipTests clean package'
       }
     }
-stage ( 'SCM CHECKOUT')
-{
-git 'https://github.com/kusupudiswamy/maven-hello-world.git'
-}
-  stage ('compile-package'){
-    sh '''
-    whoami
-    
-    pwd
-    cd my-app
-    
-    pwd
-    
-    mvn -B -DskipTests clean package'''
 
-}
   }
 }
