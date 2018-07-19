@@ -1,8 +1,14 @@
-node
-{
-tools {
+pipeline {
+  agent any
+  tools {
     maven 'mvn'
   }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'echo hello'
+      }
+    }
 stage ( 'SCM CHECKOUT')
 {
 git 'https://github.com/kusupudiswamy/maven-hello-world.git'
@@ -16,8 +22,8 @@ git 'https://github.com/kusupudiswamy/maven-hello-world.git'
     
     pwd
     
-    mvn package'''
+    mvn -B -DskipTests clean package'''
 
+}
   }
-
 }
