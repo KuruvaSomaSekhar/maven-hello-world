@@ -2,7 +2,7 @@ node
 {
 stage ( 'SCM CHECKOUT')
 {
-git 'https://github.com/kusupudiswamy/maven-hello-world'
+git 'https://github.com/kusupudiswamy/maven-hello-world.git'
 }
   stage ('compile-package'){
     def mavenhome=tool name: 'maven', type: 'maven'
