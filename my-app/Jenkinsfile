@@ -1,0 +1,12 @@
+node
+{
+stage ( 'SCM CHECKOUT')
+{
+git 'https://github.com/kusupudiswamy/maven-hello-world'
+}
+stage ('compile-package')
+sh 'mvn package'
+
+
+
+}
