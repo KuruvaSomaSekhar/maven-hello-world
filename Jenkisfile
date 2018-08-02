@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+  tools {
+    maven 'mvn'
+  }
+  stages {
+    stage('Build') {
+      steps {
+	    git 'https://github.com/kusupudiswamy/maven-hello-world.git'
+        sh '''
+	pwd
+	cd my-app
+	mvn -B -DskipTests clean package'''
+      }
+    }
+
+  }
+}
